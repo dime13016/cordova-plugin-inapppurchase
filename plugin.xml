@@ -40,10 +40,6 @@
       <merges target="inAppPurchase" />
     </js-module>
 
-    <config-file target="AndroidManifest.xml" parent="/manifest">
-      <uses-permission android:name="com.android.vending.BILLING" />
-    </config-file>
-
     <config-file target="res/xml/config.xml" parent="/*">
       <feature name="InAppBillingV3">
         <param name="android-package" value="com.alexdisler.inapppurchases.InAppBillingV3"/>
@@ -61,6 +57,8 @@
     <source-file src="src/android/Security.java" target-dir="src/com/alexdisler/inapppurchases" />
     <source-file src="src/android/SkuDetails.java" target-dir="src/com/alexdisler/inapppurchases" />
     <source-file src="src/android/billing/IInAppBillingService.aidl" target-dir="src/com/android/vending/billing" />
+    
+    <framework src="com.android.billingclient:billing:3.0.3" />
   </platform>
 
 </plugin>
